@@ -1,0 +1,90 @@
+@mixin section-width() {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    max-width: $max-mobile-wrapper;
+  }
+  @media #{$min-tablet-width} {
+    max-width: $max-tablet-wrapper;
+  }
+  @media #{$min-desktop-width} {
+    max-width: $max-desktop-wrapper;
+  }
+}
+@mixin section-width-no-mobile() {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  @media #{$min-tablet-width} {
+    max-width: $max-tablet-wrapper;
+  }
+  @media #{$min-desktop-width} {
+    max-width: $max-desktop-wrapper;
+  }
+}
+@mixin paddings() {
+  @media #{$max-mobile-width} {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@mixin paddings-no-mobile() {
+  @media #{$min-tablet-width} {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@mixin centers {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin main-btn {
+  @media #{$max-mobile-width} {
+    color: #fff;
+    border: 1px solid #339960;
+    border-radius: 3px;
+    background: rgb(73,186,122);
+    background: -moz-linear-gradient(top, rgba(73,186,122,1) 0%, rgba(52,154,96,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(73,186,122,1) 0%,rgba(52,154,96,1) 100%);
+    background: linear-gradient(to bottom, rgba(73,186,122,1) 0%,rgba(52,154,96,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49ba7a', endColorstr='#349a60',GradientType=0 );
+    box-shadow: 0 2px 0px 0px #277f4e;
+  }
+  @media #{$min-tablet-width} {
+    color: #fff;
+    border: 1px solid #339960;
+    border-radius: 3px;
+    background: rgb(73,186,122);
+    background: -moz-linear-gradient(top, rgba(73,186,122,1) 0%, rgba(52,154,96,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(73,186,122,1) 0%,rgba(52,154,96,1) 100%);
+    background: linear-gradient(to bottom, rgba(73,186,122,1) 0%,rgba(52,154,96,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49ba7a', endColorstr='#349a60',GradientType=0 );
+    box-shadow: 0 2px 0px 0px #277f4e;
+  }
+  @media #{$min-desktop-width} {
+    box-shadow: 0 3px 0 0 #277f4e;
+  }
+}
+@mixin main-btn--hover {
+  @media #{$min-tablet-width} {
+    color: #fff;
+    background: rgb(89,224,168);
+    background: -moz-linear-gradient(top, rgba(89,224,168,1) 1%, rgba(58,173,110,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(89,224,168,1) 1%,rgba(58,173,110,1) 100%);
+    background: linear-gradient(to bottom, rgba(89,224,168,1) 1%,rgba(58,173,110,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59e0a8', endColorstr='#3aad6e',GradientType=0 );
+  }
+}

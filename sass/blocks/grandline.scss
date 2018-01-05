@@ -1,0 +1,16 @@
+.grandline {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    width: 100%;
+    height: 11px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/grandline--tablet.jpg");
+  }
+  @media #{$min-desktop-width} {
+    height: 19px;
+    background-image: url("/img/grandline--desktop.jpg");
+  }
+}

@@ -1,0 +1,244 @@
+html {
+  font-size: 0.625rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $links-color;
+  font-family: $font-main;
+  transition: all 0.2s ease 0s;
+}
+div,
+article,
+section {
+  box-sizing: border-box;
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+body {
+  font-family: $font-main;
+  font-weight: 400;
+  margin: 0px;
+  color: $text-main-color;
+  background-color: $main-bg;
+  transition: all 0.2s ease 1s;
+}
+input,
+textarea {
+  font-family: $font-main;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    border-radius: 3px;
+  }
+  @media #{$min-tablet-width} {
+    border-radius: 3px;
+  }
+  @media #{$min-desktop-width} {
+    border-radius: 4px;
+  }
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+input[type="number"],
+input[type="tel"],
+input[type="text"],
+textarea {
+  @media #{$max-mobile-width} {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
+input:focus {
+  outline-width: 0;
+  outline: none;
+}
+button {
+  font-family: $font-main;
+  border-width: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+button:focus {
+  outline-width: 0;
+  outline: none;
+}
+label {
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.disable {
+  display: none !important;
+}
+.next-btn {
+  color: #fff;
+  font-weight: 700;
+  @include main-btn;
+  text-transform: uppercase;
+  @media #{$max-mobile-width} {
+    font-size: 1.6rem;
+    padding-left: 35px;
+    padding-right: 26px;
+    padding-top: 20px;
+    padding-bottom: 17px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.3rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 17px;
+    padding-right: 14px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.5rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 24px;
+  }
+}
+.next-btn:hover {
+  @include main-btn--hover;
+}
+.next-btn-txt::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  border: 1px solid #49b178;
+  border-radius: 50%;
+  right: 0;
+  top: 50%;
+  background: rgb(50,146,95);
+  background: url("../img/next-icon.svg"), -moz-linear-gradient(top, rgba(50,146,95,1) 0%, rgba(87,187,133,1) 100%);
+  background: url("../img/next-icon.svg"), -webkit-linear-gradient(top, rgba(50,146,95,1) 0%,rgba(87,187,133,1) 100%);
+  background: url("../img/next-icon.svg"), linear-gradient(to bottom, rgba(50,146,95,1) 0%,rgba(87,187,133,1) 100%);
+  background-repeat: no-repeat;
+  @media #{$max-mobile-width} {
+    width: 33px;
+    height: 33px;
+    transform: translateY(-16.5px);
+    background-size: 7px 12px, 100% 100%;
+    background-position: 13px center, center;
+  }
+  @media #{$min-tablet-width} {
+    width: 24px;
+    height: 24px;
+    transform: translateY(-12px);
+    background-size: 5px 11px, 100% 100%;
+    background-position: 10px center, center;
+  }
+  @media #{$min-desktop-width} {
+    width: 30px;
+    height: 30px;
+    transform: translateY(-15px);
+    background-size: 6px 11px, 100% 100%;
+    background-position: 13px center, center;
+  }
+}
+.next-btn:hover .next-btn-txt::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  border: 1px solid #4fc896;
+  border-radius: 50%;
+  right: 0;
+  top: 50%;
+  background: rgb(50,146,95);
+  background: url("../img/next-icon.svg"), -moz-linear-gradient(top, rgba(58,173,110,1) 0%, rgba(89,224,168,1) 100%);
+  background: url("../img/next-icon.svg"), -webkit-linear-gradient(top, rgba(58,173,110,1) 0%,rgba(89,224,168,1) 100%);
+  background: url("../img/next-icon.svg"), linear-gradient(to bottom, rgba(58,173,110,1) 0%,rgba(89,224,168,1) 100%);
+  background-repeat: no-repeat;
+  @media #{$max-mobile-width} {
+    width: 33px;
+    height: 33px;
+    transform: translateY(-16.5px);
+    background-size: 7px 12px, 100% 100%;
+    background-position: 13px center, center;
+  }
+  @media #{$min-tablet-width} {
+    width: 24px;
+    height: 24px;
+    transform: translateY(-12px);
+    background-size: 5px 11px, 100% 100%;
+    background-position: 10px center, center;
+  }
+  @media #{$min-desktop-width} {
+    width: 30px;
+    height: 30px;
+    transform: translateY(-15px);
+    background-size: 6px 11px, 100% 100%;
+    background-position: 13px center, center;
+  }
+}
+.prev-btn {
+  font-weight: 700;
+  color: #4c9650;
+  text-transform: uppercase;
+  display: block;
+  text-align: right;
+  position: relative;
+  @media #{$max-mobile-width} {
+    font-size: 1.6rem;
+    width: 75px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.3rem;
+    width: 60px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.5rem;
+    width: 70px;
+  }
+}
+.prev-btn::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/img/back-arrow.svg");
+  @media #{$max-mobile-width} {
+    width: 21px;
+    height: 12px;
+    transform: translateY(-6px);
+  }
+  @media #{$min-tablet-width} {
+    width: 16px;
+    height: 9px;
+    transform: translateY(-4px);
+  }
+  @media #{$min-desktop-width} {
+    width: 21px;
+    height: 12px;
+  }
+}
