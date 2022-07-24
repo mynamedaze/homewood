@@ -95,6 +95,24 @@ label {
   cursor: pointer;
   box-sizing: border-box;
 }
+.stage-error-txt {
+  display: block;
+  text-align: center;
+  left: 0;
+  color: red;
+  @media #{$max-mobile-width} {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+}
 .disable {
   display: none !important;
 }

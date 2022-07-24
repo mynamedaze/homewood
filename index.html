@@ -9,7 +9,6 @@
   <meta name="description" content="Получите ключи от экологичного и теплого дома из высококачественной древесины уже через 90 дней!" />
   <meta name="keywords" content="строительство домов, цена дома, строительство сип, быстровозводимые дома, каркасные дома, срубы домов, деревянные дома, дома под ключ, строительство сип домов, дома деревянные цены, дома под ключ, стоимость строительства дома, строительство из бруса, строительство дачных домов, строительство сочи домов, быстровозводимые дома цены, строительство под ключ, стоимость каркасного дома, строительство домов севастополь, строительство ставрополь дома, строительство домов недорого, строительство одноэтажных домов, строительство домов канадских, купить деревянные дома, заказать строительство дома, заказать дом сип, канадские дома проекты, заказать каркасный дом, заказать деревянный дом, готовый сруб дома, стоимость постройки дома, цена бревенчатые дома" />
   <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
-  <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <link rel="author" href="/humans.txt" />
   <title>Pro Home Wood - дома из высококачественной древесины</title>
   <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
@@ -92,7 +91,7 @@
         <h3 class="intro__form-title">Оставьте заявку на получение проекта!</h3>
         <form action="mail-lite.php" method="POST" class="intro__form  this_is_my_lead_form  form_lead_stt" id="intro-form">
           <input type="text" class="intro__input  name_lead_stt" id="intro-name-input" name="uname" placeholder="Введите имя">
-          <input type="tel" class="intro__input  phone_lead_stt" id="intro-phone-input" name="uphone" placeholder="+_ (___) ___-____" required>
+          <input type="tel" class="intro__input  phone_lead_stt" id="intro-phone-input" name="uphone" placeholder="Введите телефон" required>
           <input type="submit" class="intro__submit" id="intro-submit" value="Получить проект">
           <div class="intro__confid-field">
             <input type="checkbox" name="intro-confid-checkbox" id="intro-confid-checkbox-id" class="intro__confid-checkbox visually-hidden"
@@ -115,9 +114,7 @@
           <li class="stage-1__item">
             <input type="radio" id="stage-1-radio-1" name="stage-1-radio" class="stage-1__radio  visually-hidden" value="Каркасный дом (канадская технология)">
             <label for="stage-1-radio-1" class="stage-1__label  stage-1__label--1">
-              <h4 class="stage-1__item-title">Каркасный дом
-                <span class="stage-1__adaptive-txt">(канадская технология)</span>
-              </h4>
+              <h4 class="stage-1__item-title">Модульный дом</h4>
               <div class="stage-1__item-img-field">
                 <img src="/img/stage-1__1.jpg" alt="каркасный дом (канадская технология)" class="stage-1__item-img">
               </div>
@@ -126,7 +123,10 @@
           <li class="stage-1__item">
             <input type="radio" id="stage-1-radio-2" name="stage-1-radio" class="stage-1__radio  visually-hidden" value="Каркасный дом (СиП панели)">
             <label for="stage-1-radio-2" class="stage-1__label  stage-1__label--2">
-              <h4 class="stage-1__item-title">Каркасный дом (СиП панели)</h4>
+              <h4 class="stage-1__item-title">
+                <span class="stage-1__adaptive-txt">Канадская технология или СиП панели</span>
+                <span class="stage-1__adaptive-txt-2">Канадский или СиП</span>
+              </h4>
               <div class="stage-1__item-img-field">
                 <img src="/img/stage-1__2.jpg" alt="Каркасный дом (СиП панели)" class="stage-1__item-img">
               </div>
@@ -171,6 +171,7 @@
             </label>
           </li>
         </ul>
+        <span class="stage-1__error-txt  stage-error-txt  disable">Выберите технологию строительства из списка</span>
         <nav class="stage-1__nav">
           <div class="stage-1__btn-next-field">
             <button class="stage-1__btn-next  next-btn">
@@ -239,6 +240,7 @@
             </label>
           </li>
         </ul>
+        <span class="stage-2__error-txt  stage-error-txt  disable">Выберите количество этажей</span>
         <nav class="stage-2__nav">
           <div class="stage-2__btn-next-field">
             <button class="stage-2__btn-next  next-btn">
@@ -251,6 +253,18 @@
       <article class="stage-3">
         <h3 class="stage-3__title  stage-3__title--square">3. Предполагаемая площадь дома</h3>
         <ul class="stage-3__list-square">
+            <li class="stage-3__item-square">
+                <input type="radio" id="stage-3-radio-square-0" name="usquare" class="stage-3__input-square  visually-hidden" value="До 50 м">
+                <label for="stage-3-radio-square-0" class="stage-3__label-square">
+                  <div class="stage-3__pseudoradio-square"></div>
+                  <div class="stage-3__image-field-square  stage-3__image-field-square--0">
+                    <img src="/img/50-100__icon.svg" alt="" class="stage-3__image-square">
+                  </div>
+                  <span class="stage-3__txt-square">До 50 м
+                    <sup>2</sup>
+                  </span>
+                </label>
+              </li>
           <li class="stage-3__item-square">
             <input type="radio" id="stage-3-radio-square-1" name="usquare" class="stage-3__input-square  visually-hidden" value="50-100 м">
             <label for="stage-3-radio-square-1" class="stage-3__label-square">
@@ -288,8 +302,9 @@
             </label>
           </li>
         </ul>
+        <span class="stage-3__error-txt--square  stage-error-txt  disable">Выберите площадь дома</span>
         <h3 class="stage-3__title  stage-3__title--ppl">
-          <span class="stage-3__title-txt--ppl">Количество постоянно проживающих членов семьи</span>
+          <span class="stage-3__title-txt--ppl">4. Количество постоянно проживающих членов семьи</span>
         </h3>
         <ul class="stage-3__list-ppl">
           <li class="stage-3__item-ppl">
@@ -321,6 +336,7 @@
             </label>
           </li>
         </ul>
+        <span class="stage-3__error-txt--ppl  stage-error-txt  disable">Выберите количество постоянно проживающих</span>
         <nav class="stage-3__nav">
           <div class="stage-3__btn-next-field">
             <button class="stage-3__btn-next  next-btn">
@@ -331,12 +347,13 @@
         </nav>
       </article>
       <article class="stage-4">
-        <h3 class="stage-4__title">4. Оставьте телефон и получите примерный расчет стоимости дома в течении 15 минут.</h3>
+        <h3 class="stage-4__title">5. Оставьте телефон и получите примерный расчет стоимости дома в течении 15 минут.</h3>
         <form action="mail.php" method="POST" class="stage-4__form  this_is_my_lead_form  form_lead_stt" id="last-form">
           <div class="stage-4__inputs">
             <div class="stage-4__input-field">
-              <input type="tel" class="stage-4__input  phone_lead_stt" name="uphone" id="stage-4-phone-input"  placeholder="+_ (___) ___-____" required>
+              <input type="tel" class="stage-4__input  phone_lead_stt" name="uphone" id="stage-4-phone-input" placeholder="Телефон" required>
             </div>
+            <span class="stage-4__error-txt  stage-error-txt  disable">Укажите номер телефона</span>
             <button class="stage-4__btn-next">
               <span class="stage-4__btn-next-txt">Получить проект</span>
             </button>
@@ -399,7 +416,7 @@
       <form action="mail-lite.php" method="POST" class="popup-callback__form  this_is_my_lead_form" id="popup-callback-form">
         <div class="popup-callback__inputs-field">
           <input type="text" name="uname" class="popup-callback__input  popup-callback__input--name  name_lead_stt" id="popup-callback-name-input" placeholder="Введите имя">
-          <input type="tel" name="uphone" class="popup-callback__input  popup-callback__input--phone  phone_lead_stt" id="popup-callback-phone-input"  placeholder="+_ (___) ___-____" required>
+          <input type="tel" name="uphone" class="popup-callback__input  popup-callback__input--phone  phone_lead_stt" id="popup-callback-phone-input"  placeholder="Телефон" required>
           <button type="submit" class="popup-callback__submit">
             <span class="popup-callback__submit-txt">Заказать звонок</span>
           </button>

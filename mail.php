@@ -28,7 +28,7 @@ $pplcount = trim($pplcount);
 //echo $telephone;
 mail("pro-home-wood@mail.ru", "Заявка на дом из дерева. pro-home-wood.ru", "Телефон: ".$telephone."\n Технология строительства: ".$techtype."\n Сколько этажей: ".$floorscount."\n Предполагаемая площадь: ".$square."\n Количество проживающих: ".$pplcount,"From: pro-home-wood@mail.ru \r\n");
 
-//$post_data = array(); mobileexpress@yandex.ru
+//$post_data = array(); pro-home-wood@mail.ru
 
 //if (isset($_POST['uname'])) { $post_data['name'] = htmlspecialchars($_POST['uname']); } else { $post_data['name'] = ''; }
 //if (isset($_POST['uphone'])) { $post_data['phone'] = htmlspecialchars($_POST['uphone']); } else { $post_data['phone'] = ''; }

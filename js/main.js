@@ -49,6 +49,9 @@ $(document).ready(function () {
 
   $(popupApprovedBtn).click(function () {
     $(popupApproved).fadeOut(300);
+    var curPos=$(document).scrollTop();
+    var scrollTime=curPos/1.73;
+    $("body,html").animate({"scrollTop":0},scrollTime);
     setTimeout(function () {
       $(overlay).fadeOut(300);
     }, 300);
@@ -113,6 +116,8 @@ $(document).ready(function () {
   var squaresSizeInput = document.getElementById('square-input');
   var pplCountInput = document.getElementById('ppl-count-input');
   /*stage-1*/
+    var stage1ErrorTxt = document.getElementsByClassName('stage-1__error-txt');
+
     var stage1Radio = document.getElementsByClassName('stage-1__radio');
 
     var stage1BtnNext = document.getElementsByClassName('stage-1__btn-next');
@@ -124,6 +129,7 @@ $(document).ready(function () {
 
     $(stage1BtnNext).click(function() {
       if (techType != undefined) {
+        $(stage1ErrorTxt).addClass('disable');
         $(stage1).fadeOut(300);
         setTimeout(function() {
           $(stage2).fadeIn(300);
@@ -133,10 +139,14 @@ $(document).ready(function () {
 
           goalTo2Trigger == true;
         }
+      } else if (techType == undefined) {
+        $(stage1ErrorTxt).removeClass('disable');
       }
     });
   /* */
   /*stage-2*/
+  var stage2ErrorTxt = document.getElementsByClassName('stage-2__error-txt');
+
   var stage2Radio = document.getElementsByClassName('stage-2__radio');
 
   var stage2BtnNext = document.getElementsByClassName('stage-2__btn-next');
@@ -150,6 +160,7 @@ $(document).ready(function () {
 
   $(stage2BtnNext).click(function() {
     if (floorsCount != undefined) {
+      $(stage2ErrorTxt).addClass('disable');
       $(stage2).fadeOut(300);
       setTimeout(function() {
         $(stage3).fadeIn(300);
@@ -159,6 +170,8 @@ $(document).ready(function () {
 
         goalTo3Trigger == true;
       }
+    } else if (floorsCount == undefined) {
+      $(stage2ErrorTxt).removeClass('disable');
     }
   });
 
@@ -171,6 +184,9 @@ $(document).ready(function () {
   });
   /* */
   /*stage-3*/
+  var stage2ErrorTxtSquare = document.getElementsByClassName('stage-3__error-txt--square');
+  var stage2ErrorPpl = document.getElementsByClassName('stage-3__error-txt--ppl');
+
   var stage3RadioSquare = document.getElementsByClassName('stage-3__input-square');
   var stage3RadioPpl = document.getElementsByClassName('stage-3__input-ppl');
 
@@ -189,6 +205,8 @@ $(document).ready(function () {
 
   $(stage3BtnNext).click(function() {
     if ((squareSize != undefined) && (pplCount != undefined)) {
+      $(stage2ErrorTxtSquare).addClass('disable');
+      $(stage2ErrorPpl).addClass('disable');
       console.log('ddd');
       $(stage3).fadeOut(300);
       setTimeout(function() {
@@ -203,6 +221,14 @@ $(document).ready(function () {
 
         goalTo4Trigger == true;
       }
+    } if (squareSize != undefined) {
+      $(stage2ErrorTxtSquare).addClass('disable');
+    } if (pplCount != undefined) {
+      $(stage2ErrorPpl).addClass('disable');
+    } if (squareSize == undefined) {
+      $(stage2ErrorTxtSquare).removeClass('disable');
+    } if (pplCount == undefined) {
+      $(stage2ErrorPpl).removeClass('disable');
     }
   });
 
@@ -215,11 +241,19 @@ $(document).ready(function () {
   });
   /* */
   /*stage-4*/
+  var stage4ErrorTxt = document.getElementsByClassName('stage-4__error-txt');
+
+  var stage4NextBtn = document.getElementsByClassName('stage-4__btn-next');
+
   var stage4BtnPrev = document.getElementsByClassName('stage-4__btn-prev');
 
   var lastForm = $('#last-form');
 
   var stage4PhoneInput = document.getElementById('stage-4-phone-input');
+
+  if ($(stage4PhoneInput).val() == undefined) {
+    $(stage4ErrorTxt).removeClass('disable');
+  }
   
   lastForm.submit(function (ev) {
       $.ajax({
@@ -227,6 +261,7 @@ $(document).ready(function () {
         url: lastForm.attr('action'),
         data: lastForm.serialize(),
         success: function (data) {
+          $(stage4ErrorTxt).addClass('disable');
           $(stage4PhoneInput).val('');
           $(stage4).fadeOut(300);
           setTimeout(function () {
@@ -243,6 +278,7 @@ $(document).ready(function () {
             'event_action': 'all',
           });
         }
+
       });
       ev.preventDefault();
     });
@@ -253,6 +289,11 @@ $(document).ready(function () {
       setTimeout(function() {
         $(stage3).fadeIn(300);
       }, 300);
+    });
+    $(stage4NextBtn).click(function() {
+      if ($(stage4PhoneInput).val() == '') {
+        $(stage4ErrorTxt).removeClass('disable');
+      }
     });
   /* */
   /*stage-5*/

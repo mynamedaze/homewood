@@ -253,3 +253,14 @@
     left: 20px;
   }
 }
+.stage-4__error-txt {
+  @media #{$max-mobile-width} {
+    margin-top: 20px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 20px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 30px;
+  }
+}

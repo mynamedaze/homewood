@@ -111,6 +111,14 @@
     display: inline;
   }
 }
+.stage-1__adaptive-txt-2 {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-desktop-width} {
+    display: none;
+  }
+}
 .stage-1__label {
   cursor: pointer;
   display: block;
